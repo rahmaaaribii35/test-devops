@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    environment {
-        // DB temporaire dans le workspace
-        SQLITE_DB_LOCATION = "${WORKSPACE}\\tmp\\todo-${BUILD_NUMBER}.db"
-    }
+    
 
     stages {
         stage('Checkout') {
