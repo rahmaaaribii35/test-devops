@@ -16,13 +16,7 @@ pipeline {
             }
         }
 
-        stage('Prepare tmp folder') {
-            steps {
-                // Créer le dossier tmp si inexistant
-                bat 'if not exist "%WORKSPACE%\\tmp" mkdir "%WORKSPACE%\\tmp"'
-            }
-        }
-
+       
         stage('Test') {
             steps {
                 bat 'npm test'
